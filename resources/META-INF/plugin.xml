@@ -1,0 +1,36 @@
+<idea-plugin version="2">
+  <id>com.xcodersteam.idea.plugins.mkupscss</id>
+  <name>Markup to SCSS</name>
+  <version>0.1.0</version>
+  <vendor email="sem-oro@yandex.ru">XCodersTeam</vendor>
+
+  <description><![CDATA[
+      Adds option to generate SCSS from selected markup(in html and JSX)
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Nothing changes, except the timestamp
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="MarkupToSCSS" class="com.xcodersteam.idea.plugins.mkupscss.GenerateSCSSAction" text="Generate SCSS"
+            description="Generate SCSS from selection">
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
