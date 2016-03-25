@@ -5,7 +5,8 @@
   <vendor email="sem-oro@yandex.ru">XCodersTeam</vendor>
 
   <description><![CDATA[
-      Adds option to generate SCSS from selected markup(in html and JSX)
+      Adds option to generate SCSS from selected markup(in html and JSX)<br>
+      <a href="https://github.com/semoro/MarkupToSCSS">https://github.com/semoro/MarkupToSCSS</a>
     ]]></description>
 
   <change-notes><![CDATA[
