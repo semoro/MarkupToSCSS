@@ -1,37 +1,50 @@
 <idea-plugin version="2">
-  <id>com.xcodersteam.idea.plugins.mkupscss</id>
-  <name>Markup to SCSS</name>
-  <version>0.1.0</version>
-  <vendor email="sem-oro@yandex.ru">XCodersTeam</vendor>
+    <id>com.xcodersteam.idea.plugins.mkupscss</id>
+    <name>Markup to SCSS</name>
+    <version>0.2.0</version>
+    <vendor email="sem-oro@yandex.ru">XCodersTeam</vendor>
 
-  <description><![CDATA[
-      Adds option to generate SCSS from selected markup(in html and JSX)<br>
+    <description><![CDATA[
+      Adds option to generate SCSS from selected markup<br>
+      Supports PHP, JSX and HTML<br>
+      <br>
       <a href="https://github.com/semoro/MarkupToSCSS">https://github.com/semoro/MarkupToSCSS</a>
-    ]]></description>
+      <br>
+      Howto:<br>
+      Open file with markup(.php, .jsx, .html)<br>
+      Select block to generate scss template<br>
+      Press RMB, select Generate SCSS from context menu<br>
+      ???????<br>
+      Paste to your scss file<br>
+      PROFIT!<br>
 
-  <change-notes><![CDATA[
-      Nothing changes, except the timestamp
     ]]>
-  </change-notes>
+    </description>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="141.0"/>
+    <change-notes><![CDATA[
+      0.2.0> Added PHP support, fixed issue with non-unique div(#1), big code refactoring<br>
+      0.1.0> Nothing changes, except the timestamp
+    ]]>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <depends>com.intellij.modules.platform</depends>
-  <depends>com.intellij.modules.lang</depends>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
 
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
-
-  <actions>
-    <action id="MarkupToSCSS" class="com.xcodersteam.idea.plugins.mkupscss.GenerateSCSSAction" text="Generate SCSS"
-            description="Generate SCSS from selection">
-      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-    </action>
-  </actions>
+    <!--
+      <extensions defaultExtensionNs="com.intellij">
+        Add your extensions here
+      </extensions>
+    -->
+    <actions>
+        <action id="MarkupToSCSS" class="com.xcodersteam.idea.plugins.mkupscss.GenerateSCSSAction" text="Generate SCSS"
+                description="Generate SCSS from selection">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 
 </idea-plugin>
