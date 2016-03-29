@@ -10,24 +10,29 @@ import scala.xml._
 
 class CodeNode(node: Node, lang: CodeLang) {
   val tag = node.label
-  val classNames = if (classnameAttribute.isDefined) Option(classnameAttribute.get.toString.split(" ").toSeq) else Option.empty
+  val classNames = {
+    val classnameAttribute = node.attribute(lang.namings.classname)
+    if (classnameAttribute.isDefined)
+      Option(classnameAttribute.get.toString.split(" ").toSeq)
+    else
+      Option.empty
+  }
   val id = node.attributes.get(lang.namings.id)
   val children = if (shouldDigDeeper) node.child.map((node) => new CodeNode(node, lang)) else null
-  private val classnameAttribute = node.attributes.get(lang.namings.classname)
 
   def isJSXNode: Boolean = if (lang == CodeLangHelper.langs.get("JSX Harmony").get) !isTag else false
 
-  def shouldRender: Boolean = !isText && !isCDATA && isTag && !(isDiv && classNames.isEmpty && id.isEmpty)
-
-  def isText: Boolean = tag == null || tag.length == 0
-
   def isTag: Boolean = tag.charAt(0).isLower
+
+  def shouldRender: Boolean = !isText && !isCDATA && isTag && !(isDiv && classNames.isEmpty && id.isEmpty)
 
   def isDiv: Boolean = tag.toLowerCase == "div"
 
   def isCDATA: Boolean = tag equalsIgnoreCase "#PCDATA"
 
   def shouldDigDeeper: Boolean = !isText && node.child.nonEmpty
+
+  def isText: Boolean = tag == null || tag.length == 0
 }
 
 class CodeConvertingException(base: Exception = null, message: String = null) extends Exception {
