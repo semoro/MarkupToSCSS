@@ -1,12 +1,12 @@
 <idea-plugin version="2">
     <id>com.xcodersteam.idea.plugins.mkupscss</id>
     <name>Markup to SCSS</name>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
     <vendor email="sem-oro@yandex.ru">XCodersTeam</vendor>
 
     <description><![CDATA[
       Adds option to generate SCSS from selected markup<br>
-      Supports PHP, JSX and HTML<br>
+      Supports PHP, JSX, AngularJS and HTML<br>
       <br>
       <a href="https://github.com/semoro/MarkupToSCSS">https://github.com/semoro/MarkupToSCSS</a>
       <br>
@@ -22,6 +22,7 @@
     </description>
 
     <change-notes><![CDATA[
+      0.2.1> JSX bugfixes<br>
       0.2.0> Added PHP support, fixed issue with non-unique div(#1), big code refactoring<br>
       0.1.0> Nothing changes, except the timestamp
     ]]>
