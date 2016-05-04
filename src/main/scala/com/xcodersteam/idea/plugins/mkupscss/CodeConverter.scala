@@ -30,9 +30,9 @@ class CodeNode(node: Node, lang: CodeLang) {
 
   def isCDATA: Boolean = tag equalsIgnoreCase "#PCDATA"
 
-  def shouldDigDeeper: Boolean = !isText && node.child.nonEmpty
-
   def isText: Boolean = tag == null || tag.length == 0
+
+  def shouldDigDeeper: Boolean = !isText && node.child.nonEmpty
 }
 
 class CodeConvertingException(base: Exception = null, message: String = null) extends Exception {

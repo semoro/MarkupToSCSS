@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MarkupToSCSS.iml" filepath="$PROJECT_DIR$/.idea/modules/MarkupToSCSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MarkupToSCSS_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MarkupToSCSS_main.iml" group="MarkupToSCSS" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MarkupToSCSS_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MarkupToSCSS_test.iml" group="MarkupToSCSS" />
+    </modules>
+  </component>
+</project>
