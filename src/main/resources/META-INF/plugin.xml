@@ -11,7 +11,7 @@
       <a href="https://github.com/semoro/MarkupToSCSS">https://github.com/semoro/MarkupToSCSS</a>
       <br>
       Howto:<br>
-      Open file with markup(.php, .jsx, .html)<br>
+      Open file with markup(.php, .jsx, .js, .html)<br>
       Select block to generate scss template<br>
       Press RMB, select Generate SCSS from context menu<br>
       ???????<br>
