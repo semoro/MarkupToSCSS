@@ -62,9 +62,11 @@ class PHPLang extends HTMLLang {
 }
 
 object CodeLangHelper {
+  val jsx = new JSXLang
   val langs = Map(
-    "JSX Harmony" -> new JSXLang,
+    "JSX Harmony" -> jsx,
     "HTML" -> new HTMLLang,
-    "PHP" -> new PHPLang
+    "PHP" -> new PHPLang,
+    "JavaScript" -> jsx
   )
 }

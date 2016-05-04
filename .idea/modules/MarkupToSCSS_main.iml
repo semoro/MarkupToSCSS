@@ -13,7 +13,7 @@
     <orderEntry type="library" name="Gradle: org.scala-lang:scala-library:2.11.8" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang:scala-xml:2.11.0-M4" level="project" />
     <orderEntry type="module-library">
-      <library name="Gradle: com.jetbrains.intellij.idea:ideaIC:LATEST-EAP-SNAPSHOT">
+      <library name="Gradle: com.jetbrains:idea:LATEST-EAP-SNAPSHOT">
         <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/cc0bb96d5b1df21809c4c5742759107319ab3624/ideaIC-LATEST-EAP-SNAPSHOT/lib/xml-apis-ext.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/cc0bb96d5b1df21809c4c5742759107319ab3624/ideaIC-LATEST-EAP-SNAPSHOT/lib/jgoodies-forms.jar!/" />
@@ -120,20 +120,12 @@
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/cc0bb96d5b1df21809c4c5742759107319ab3624/ideaIC-LATEST-EAP-SNAPSHOT/lib/fluent-hc-4.4.1.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/cc0bb96d5b1df21809c4c5742759107319ab3624/ideaIC-LATEST-EAP-SNAPSHOT/lib/external-system-rt.jar!/" />
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/cc0bb96d5b1df21809c4c5742759107319ab3624/ideaIC-LATEST-EAP-SNAPSHOT/lib/snappy-in-java-0.3.1.jar!/" />
+          <root url="jar:///usr/lib/jvm/java-8-oracle/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/LATEST-EAP-SNAPSHOT/c9e09811784fa0653db2d0e8e2d7eb9c3e5f59a7/ideaIC-LATEST-EAP-SNAPSHOT-sources.jar!/" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="RUNTIME">
-      <library>
-        <CLASSES>
-          <root url="jar:///usr/lib/jvm/java-8-oracle/lib/tools.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
       </library>
     </orderEntry>
   </component>

@@ -48,6 +48,8 @@ apply plugin: 'org.jetbrains.intellij'
 
 intellij {
     pluginName 'MarkupToSCSS'
+    alternativeIdePath idePath
+    updateSinceUntilBuild false
 }
 
 

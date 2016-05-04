@@ -2,6 +2,7 @@ package com.xcodersteam.idea.plugins.mkupscss
 
 
 import java.awt.datatransfer.StringSelection
+import java.util.regex.Pattern
 
 import com.intellij.openapi.actionSystem.{AnAction, AnActionEvent, CommonDataKeys}
 import com.intellij.openapi.ide.CopyPasteManager
@@ -16,14 +17,15 @@ import com.intellij.openapi.wm.WindowManager
   */
 class GenerateSCSSAction extends AnAction {
 
+  val pattern = Pattern.compile("<[^>]*>")
+
   override def update(e: AnActionEvent): Unit = {
     val project = e.getData(CommonDataKeys.PROJECT)
     val editor = e.getData(CommonDataKeys.EDITOR)
     val lang = e.getData(CommonDataKeys.PSI_FILE).getFileType.getName
     e.getPresentation.setVisible(CodeLangHelper.langs.get(lang).isDefined && project != null && editor != null)
-    e.getPresentation.setEnabled(editor.getSelectionModel.hasSelection())
+    e.getPresentation.setEnabled(editor.getSelectionModel.hasSelection() && pattern.matcher(editor.getSelectionModel.getSelectedText).find())
   }
-
 
   override def actionPerformed(anActionEvent: AnActionEvent): Unit = {
     val editor = anActionEvent.getData(CommonDataKeys.EDITOR)
@@ -49,7 +51,6 @@ class GenerateSCSSAction extends AnAction {
           .setFadeoutTime(5000)
           .createBalloon().showInCenterOf(statusBar.getComponent)
     }
-
 
   }
 }
