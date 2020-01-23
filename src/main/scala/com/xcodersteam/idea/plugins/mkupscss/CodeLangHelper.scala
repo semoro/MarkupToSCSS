@@ -67,6 +67,7 @@ object CodeLangHelper {
     "JSX Harmony" -> jsx,
     "HTML" -> new HTMLLang,
     "PHP" -> new PHPLang,
-    "JavaScript" -> jsx
+    "JavaScript" -> jsx,
+    "Vue" => jsx
   )
 }
